@@ -1,0 +1,51 @@
+.navbar a.ativa{
+    color: var(--main-color);
+}
+
+.navbar.ativa{
+    display: block;
+}
+
+
+.navbar a{
+    font-size: 2.0rem;
+    color: var(--texto-color);
+    margin-left: 3rem;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.menuicon{
+    display: none;
+    font-size: 4.0rem;
+    color: var(--texto-color);
+}
+
+
+/*rm*/
+
+@media (max-width: 777px) {
+    /* ativando o menu icones*/
+       .menuicon{
+           display: block;
+       }
+       .navbar{
+           position: absolute;
+           top: 100%;
+           left: 0;
+           width: 100%;
+           padding: 1rem 3%;
+           background: var(--bg-color);
+           border-top: .1rem solid rgba(0,0,0,.2);
+           box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+           display: none;
+       }
+       .navbar a{
+           display: block;
+           font-size: 2rem;
+           margin: 3rem 0;
+       }
+       
+   }

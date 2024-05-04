@@ -1,0 +1,42 @@
+.contato{
+    background-image: url('/site-assets/Contato/background.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contato h2{
+    margin-bottom: 3rem;
+}
+
+.contato p{
+    font-size: 1.6rem;
+    padding: 50px;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+
+.contato_conteiner{
+    display: flex;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.contato_conteiner a{
+    font-size: 2rem;
+    border: 2px solid;
+    padding: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contato_conteiner a:hover{
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}

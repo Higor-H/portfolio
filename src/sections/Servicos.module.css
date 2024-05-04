@@ -1,0 +1,310 @@
+
+
+
+.servicos h2{
+    margin-bottom: 1rem;
+}
+
+
+.servicopage .servicos{
+    padding: 0;
+    
+}
+
+
+
+.servicos_conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    padding-bottom: 4rem;
+    
+    
+}
+
+
+
+/* .servicos_conteiner .servico_box{
+    
+    
+    
+   
+    
+   
+   
+   
+    
+   
+    
+    
+} */
+
+
+.servicos_conteiner .servico_box_index{
+    display: flex;
+    flex: 1 1 30rem;
+    background-color: var(--segunda-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 3rem;
+    text-align: center;
+    border: 0.2rem solid var(--bg-color);
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.servicos_conteiner .servico_box_index:hover{
+    border-color: var(--main-color);
+    /*transform: scale(1.02);*/
+    
+}
+
+
+
+/**/
+
+.servico_box_index{
+    display: flex;
+}
+
+
+/**/
+
+
+.servico_box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+.servico_box h3{
+    font-size: 2.5rem;
+}
+
+.servico_box p{
+    font-size: 1.6rem;
+    margin: .5rem 0 3rem;
+}
+
+
+
+
+
+
+.servico_layout .servicos{
+    padding: 0;
+    
+}
+
+.servico_layout{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.servico_layout span{
+    font-size: xx-large;
+    
+}
+
+/* .servico_layout img:hover{
+    opacity: 0;
+    transition: .4s;
+} */
+
+
+.servico_conteiner{
+    text-align: left;
+}
+
+.servico_conteiner h3{
+    font-size: 3.0rem;
+    font-weight: 700;
+}
+
+.servico_conteiner p{
+    font-size: 3vh;
+}
+
+.servico_conteiner h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+/**/
+.img{
+    margin-top: 5rem;
+    width:auto;
+}
+
+/* .img:hover{
+    
+    background-image: url('../img/fron2.png');
+    background-repeat: no-repeat;
+    
+} */
+
+
+
+
+
+.about{
+    padding-top: .5rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    background-color: var(--segunda-bg-color);
+}
+
+
+.conteiner_img img{
+    width: 9vw;
+}
+
+
+
+
+.about_text_conteiner{
+    height:auto;
+    text-align: left;
+}
+.about_text_conteiner h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about_text_conteiner h3{
+    font-size: 2.7rem;
+}
+
+.about_text_conteiner p{
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem;
+}
+
+
+
+.about_header{
+    text-align: center;
+    font-size: 5rem;
+}
+
+
+.img img{
+    border-radius: 50px;
+}
+
+@media (max-width: 750px) {
+       .servico_layout{
+           flex-direction: column;
+           padding-top: 7rem;
+   
+       }
+
+       /* .servico_layout img:hover {
+        opacity: 1;
+        transition: .4s;
+    
+        }    */
+
+        .img img{
+            width: 25rem; 
+            margin-top: 4.2rem; 
+        }
+    
+        .img{
+            width: auto;
+            padding: auto;
+            margin: auto;
+            margin-bottom: 4rem;
+        }
+    
+     
+        
+        /* .img:hover{
+            opacity: 1;
+            background-image: none;
+            background-repeat: no-repeat;
+            
+        } */
+    }
+
+@media (max-width: 375px){ 
+    .conteiner_img{
+            width: 0;
+    }
+    .conteiner_img img{
+            width: 0;
+    }
+}
+
+
+@media (max-width: 320px){ 
+
+    
+    .about_text_conteiner span{
+        font-size: 37px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 960px) {
+    .servicos{
+        padding-bottom: 5em;
+    }
+}
+
+@media (max-width: 768px){ 
+    .servicos_conteiner{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 750px) {
+       .servicos h2{
+           margin-bottom: 2rem;
+       }
+   
+       .servicos{
+           padding-left: 6.25rem;
+           padding-right: 6.25rem;
+   
+       }
+   
+       .servicopage{
+           flex-direction: column;
+           padding-top: 7rem;
+   
+       }
+    }
+
+
+    @media (max-width: 320px){ 
+    .servicos {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+    .servicos h2{
+        font-size: 4.5rem;
+    }
+
+
+} 
+
+@media (max-width: 320px){ 
+    .servicos h2{
+        font-size: 4.5rem;
+    }
+} 
