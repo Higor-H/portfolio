@@ -1,0 +1,39 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #100E47;
+}
+
+.footer_text p{
+    font-size: 1.5rem;
+}
+
+.footer_icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+}
+
+.footer_icon a i{
+    font-size: 2rem;
+    color: var(--segunda-bg-color);
+}
+
+.footer_icon a:hover{
+    background: var(--texto-color);
+    transition: .9s;
+    transform: rotate(360deg);
+}
+
+@media (max-width: 320px){ 
+
+    .footer_text p {
+        font-size: 1.1rem;
+    }
+}

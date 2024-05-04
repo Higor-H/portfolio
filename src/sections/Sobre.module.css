@@ -1,0 +1,97 @@
+.sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--segunda-bg-color);
+}
+
+.sobre_img img{
+    width: 35vw;
+}
+
+
+.sobre_conteiner h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.sobre_conteiner h3{
+    font-size: 2.7rem;
+}
+
+.sobre_conteiner p{
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem;
+}
+
+
+
+
+
+.course_conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    padding-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+
+.course_conteiner div{
+    display: flex;
+    flex: 1 1 30rem;
+    background-color: var(--segunda-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 3rem;
+    text-align: center;
+    border: 0.2rem solid var(--bg-color);
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.course_conteiner div:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+
+/****************************/
+
+@media (max-width: 750px) {
+    
+
+       /*SOBRE*/
+       .sobre_img img{
+           width: 45vw;
+           border: 2px solid var(--main-color);
+       }
+       
+       
+   
+       
+   }
+   @media (max-width: 426px){ 
+       .sobre{
+           flex-direction: column;
+       }
+
+
+        /* Btn from "../components/Btn"; */
+       .sobre a{
+           display: grid;
+           text-align: center;
+           margin-left: 6rem;
+           margin-right: 6rem;
+           margin-bottom: 5rem;
+           margin-top: 4rem;
+       }
+       
+   }
+   
+   
