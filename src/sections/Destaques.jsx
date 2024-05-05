@@ -8,12 +8,12 @@ import Section_Header from '../components/Sections_Header';
 
 const Destaques = () =>{
 
-    const [banner1, setBanner1] = useState("/img/Destaques/destaque2.png");
-    const [banner2, setBanner2] = useState("/img/Destaques/destaque3.png");
-    const a = "/img/Destaques/destaque2.png";
-    const b = "/img/Destaques/destaque1.png";
-    const c = "/img/Destaques/destaque3.png";
-    const d = "/img/Destaques/destaque4.png";
+    const [banner1, setBanner1] = useState("./img/Destaques/destaque2.png");
+    const [banner2, setBanner2] = useState("./img/Destaques/destaque3.png");
+    const a = "./img/Destaques/destaque2.png";
+    const b = "./img/Destaques/destaque1.png";
+    const c = "./img/Destaques/destaque3.png";
+    const d = "./img/Destaques/destaque4.png";
 
     function changeBanner() {
         
