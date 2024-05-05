@@ -25,7 +25,7 @@
 }
 
 .home_img:hover{
-    background-image: url('./img/Home/home_hover.svg');
+    background-image: url('/img/Home/home_hover.svg');
     background-repeat: no-repeat;
 }
 
