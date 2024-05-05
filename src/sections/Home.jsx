@@ -61,12 +61,12 @@ const Home = () => {
                         <a href="https://www.linkedin.com/in/higor-milani/" target="_blank"><i className='bx bxl-linkedin' ></i></a>
                     </div>
                     
-                    <Btn url={"/img/Currículo-Higor_Milani.pdf"} text_btn={"Download CV"}  download={"Currículo - Higor_Milani"}/>
+                    <Btn url={"./img/Currículo-Higor_Milani.pdf"} text_btn={"Download CV"}  download={"Currículo - Higor_Milani"}/>
                     
                     
                 </div>
                 <div className={styles.home_img}>
-                        <img src="/img/Home/home.svg" alt="Higor Milani Logo" />
+                        <img src="./img/Home/home.svg" alt="Higor Milani Logo" />
                     </div>  
             </section>
         </>

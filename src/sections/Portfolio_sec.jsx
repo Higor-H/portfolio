@@ -20,7 +20,7 @@ const Portfolio_sec = () => {
     });
 */
 
-    let baseUrlImg = "/img/Portfolio/";
+    let baseUrlImg = "./img/Portfolio/";
     return(
         <section id="portfolio" className={styles.portfolio} >
             <div className='scroll_conteiner'>

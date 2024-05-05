@@ -53,7 +53,7 @@ const Sobre = () => {
     return(
         <section id="sobre" className={styles.sobre} >
             <div className={styles.sobre_img}>
-                <img src="/img/Sobre/sobre.png" alt="Imagem de Higor Milani"/>
+                <img src="./img/Sobre/sobre.png" alt="Imagem de Higor Milani"/>
             </div>
             <div className={styles.sobre_conteiner} >
 
