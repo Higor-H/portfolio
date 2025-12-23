@@ -43,7 +43,6 @@ span{
 }
 
 .typed-cursor,.typed-cursor typed-cursor--blink{
-    display: none;
     color: #1f242d00;
     display: inline-flex;
 }
