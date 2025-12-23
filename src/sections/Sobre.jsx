@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 
 import ScrollReveal from "scrollreveal";
 import Typed from "typed.js";
 
 import Btn from "../components/Btn";
 import Card from "../components/Card";
-import Section_Header from '../components/Sections_Header';
+import SectionHeader from '../components/Sections_Header';
 
 import {data} from "../data";
 
@@ -14,14 +14,14 @@ import styles from "./Sobre.module.css";
 
 const Sobre = () => {
 
-    const [isPopupOpen, setPopupOpen] = useState(false);
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     function openPopup() {
-        setPopupOpen(true);
+        setIsPopupOpen(true);
     }
 
     function closePopup() {
-        setPopupOpen(false);
+        setIsPopupOpen(false);
     }
 
 
@@ -36,7 +36,7 @@ const Sobre = () => {
     });
 
     useEffect(() => {
-        var typed = new Typed("#typed_text_sobre", {
+        let typed = new Typed("#typed_text_sobre", {
             strings: ["Desenvolvedor Front-End", "Designer", "Progamador", "Desenvolvedor Back-End"],
             typeSpeed: 40,
             backSpeed: 100,
@@ -57,7 +57,7 @@ const Sobre = () => {
             </div>
             <div className={styles.sobre_conteiner} >
 
-                <Section_Header title={"Sobre "} span={"mim!"}/>
+                <SectionHeader title={"Sobre "} span={"mim!"}/>
                 
                 <h3>
                     <span id='typed_text_sobre' >s</span>
@@ -75,7 +75,7 @@ const Sobre = () => {
                     <div  className="popup_content" >
                         <span className="close" onClick={closePopup} >&times;</span>
                         <section className="popup_layout">
-                                <Section_Header title={"Meus "} span={"Cursos"}/>
+                                <SectionHeader title={"Meus "} span={"Cursos"}/>
                                 <div className={styles.course_conteiner} >
                                     {data.sobre.map((item, index) =>(
                                         <Card key={index}  url={item.url} title={item.title} organization={item.organization} validation={item.validation}  />

@@ -52,14 +52,21 @@
     align-content: space-around;
     justify-content: space-evenly;
     align-items: center;
+
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-
-.course_conteiner div:hover{
-    border-color: var(--main-color);
-    transform: scale(1.02);
+@media (prefers-reduced-motion: no-preference) {
+    .course_conteiner div:hover {
+        border-color: var(--main-color);
+        transform: scale(1.02);
+    }
 }
-
+    @media (prefers-reduced-motion: reduce) {
+        .course_conteiner div:hover {
+            border-color: var(--main-color);
+        }
+    }
 
 /****************************/
 
@@ -69,7 +76,7 @@
        /*SOBRE*/
        .sobre_img img{
            width: 45vw;
-           border: 2px solid var(--main-color);
+           border: 0.2rem solid var(--main-color);
        }
        
        
@@ -86,10 +93,7 @@
        .sobre a{
            display: grid;
            text-align: center;
-           margin-left: 6rem;
-           margin-right: 6rem;
-           margin-bottom: 5rem;
-           margin-top: 4rem;
+           margin: 4rem 6rem 5rem;
        }
        
    }

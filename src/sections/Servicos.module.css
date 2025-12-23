@@ -25,20 +25,7 @@
 
 
 
-/* .servicos_conteiner .servico_box{
-    
-    
-    
-   
-    
-   
-   
-   
-    
-   
-    
-    
-} */
+
 
 
 .servicos_conteiner .servico_box_index{
@@ -60,20 +47,19 @@
 
 .servicos_conteiner .servico_box_index:hover{
     border-color: var(--main-color);
-    /*transform: scale(1.02);*/
     
 }
 
 
 
-/**/
+
 
 .servico_box_index{
     display: flex;
 }
 
 
-/**/
+
 
 
 .servico_box i{
@@ -110,10 +96,6 @@
     
 }
 
-/* .servico_layout img:hover{
-    opacity: 0;
-    transition: .4s;
-} */
 
 
 .servico_conteiner{
@@ -136,18 +118,13 @@
 }
 
 
-/**/
+
 .img{
     margin-top: 5rem;
     width:auto;
 }
 
-/* .img:hover{
-    
-    background-image: url('../img/fron2.png');
-    background-repeat: no-repeat;
-    
-} */
+
 
 
 
@@ -206,11 +183,7 @@
    
        }
 
-       /* .servico_layout img:hover {
-        opacity: 1;
-        transition: .4s;
-    
-        }    */
+
 
         .img img{
             width: 25rem; 
@@ -219,19 +192,12 @@
     
         .img{
             width: auto;
-            padding: auto;
-            margin: auto;
-            margin-bottom: 4rem;
+            margin: auto auto 4rem;
         }
     
      
         
-        /* .img:hover{
-            opacity: 1;
-            background-image: none;
-            background-repeat: no-repeat;
-            
-        } */
+
     }
 
 @media (max-width: 375px){ 
@@ -244,13 +210,6 @@
 }
 
 
-@media (max-width: 320px){ 
-
-    
-    .about_text_conteiner span{
-        font-size: 37px;
-    }
-}
 
 
 
@@ -300,11 +259,9 @@
         font-size: 4.5rem;
     }
 
-
-} 
-
-@media (max-width: 320px){ 
-    .servicos h2{
-        font-size: 4.5rem;
+    .about_text_conteiner span{
+        font-size: 37px;
     }
-} 
+
+
+}

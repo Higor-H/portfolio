@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect } from 'react';
 import styles from "./style.module.css";
 
 const Header = () => {
@@ -32,7 +32,7 @@ const Header = () => {
                         header.classList.toggle(`${styles.header_shadow}`, window.scrollY > 100);
 
                     });
-                };
+                }
 
             });
         };
