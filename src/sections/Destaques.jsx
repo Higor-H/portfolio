@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-
-import ScrollReveal from "scrollreveal";
+import  { useState } from 'react';
 
 import styles from "./Destaques.module.css";
 
-import Section_Header from '../components/Sections_Header';
+import SectionHeader from '../components/Sections_Header';
 
 const Destaques = () =>{
 
@@ -17,13 +15,13 @@ const Destaques = () =>{
 
     function changeBanner() {
         
-        if (banner1 == a) {
+        if (banner1 === a) {
             setBanner1(b);
         } else {
             setBanner1(a);
         }
 
-        if (banner2 == c) {
+        if (banner2 === c) {
             setBanner2(d);
         } else {
             setBanner2(c);
@@ -32,21 +30,11 @@ const Destaques = () =>{
     }
     setInterval(changeBanner, 5000);
 
-/*
-    useEffect(()=>{
-        ScrollReveal({
-            distance: '100px',
-            duration: 2000,
-            delay: 10,
-        });
-        ScrollReveal().reveal(".scroll_conteiner",{origin: 'bottom'});
-    });
-*/
 
     return(
         <section id="destaques" className={styles.destaques} >
             <div className='scroll_conteiner'>
-                <Section_Header span={"Destaques"} />
+                <SectionHeader span={"Destaques"} />
                 <div className={styles.destaques_conteiner}>
                     <div className={styles.banner}>
                         <img src={banner1} alt=""/>
