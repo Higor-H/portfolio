@@ -1,4 +1,4 @@
-import  { useEffect } from 'react';
+import {useEffect, useRef} from 'react';
 
 import ScrollReveal from "scrollreveal";
 import Typed from "typed.js";
@@ -9,29 +9,52 @@ import styles from "./Home.module.css";
 
 const Home = () => {
 
+    const typedRef = useRef(null);
 
+   const scrollRevealRef = useRef(null);
 
     useEffect(()=>{
-        ScrollReveal({
+        const sr = ScrollReveal({
             distance: '100px',
             duration: 2000,
             delay: 10,
         });
-        ScrollReveal().reveal(`.${styles.home_conteiner}`,{origin: 'top'});
-        ScrollReveal().reveal(`.${styles.home_conteiner} h1`,{origin: 'left'}); 
-        ScrollReveal().reveal(`.${styles.social_media}`,{origin: 'left'}); 
-    });
-    
-    
+
+        scrollRevealRef.current = sr;
+
+        sr.reveal(`.${styles.home_conteiner}`, { origin: 'top' });
+        sr.reveal(`.${styles.home_conteiner} h1`, { origin: 'left' });
+        sr.reveal(`.${styles.social_media}`, { origin: 'left' });
+
+        return () => {
+            if (scrollRevealRef.current) {
+                scrollRevealRef.current.destroy();
+                scrollRevealRef.current = null;
+            }
+        };
+    },  []);
+
+
 
     useEffect(() => {
-        let typed = new Typed("#typed_text_home", {
-            strings: ["Desenvolvedor Front-End", "Designer", "Progamador", "Desenvolvedor Back-End"],
+        if (!typedRef.current) return;
+
+        const typed = new Typed(typedRef.current, {
+            strings: [
+                "Full Stack Developer",
+                "QA Engineer",
+                "Test Automation Engineer",
+                "Big Data Professional",
+                "Cybersecurity Enthusiast",
+                "AI and Machine Learning Practitioner",
+            ],
             typeSpeed: 40,
             backSpeed: 100,
             backDelay: 1000,
             loop: true,
-          });
+            smartBackspace: false
+        });
+
         return () => {
             typed.destroy();
         };
@@ -45,14 +68,13 @@ const Home = () => {
             <div className={styles.home_conteiner}>
                 <h3>Olá meu nome é</h3>
                 <h1>Higor Milani</h1>
-                <h3>E sou um </h3>
-                <h3>
-                    <span id='typed_text_home' className={styles.typed_text}></span>
-                    <span className={styles.none}>Desenvolvedor Back-end</span>
+                <h3>E atuo como </h3>
+                <h3 className={styles.typedWrapper}>
+                    <span ref={typedRef} className={styles.typed_text}></span>
                 </h3>
-                <p>Estudante de Ciências da Computação na ATITUS (Antiga Imed) e me dedico fortemente na área de
-                    tecnologia, tanto em software como em hardware, mesmo focando na área de TI sempre que eu posso eu
-                    mesclo conhecimentos de outras áreas em meus projetos, afinal a tecnologia está em tudo.</p>
+                <p>Estudante de Ciências da Computação na ATITUS, apaixonado por tecnologia e desenvolvimento de software.
+                    Atuo com QA, automação de testes e desenvolvimento Full Stack, além de explorar áreas como Big Data, cibersegurança e inteligência artificial,
+                    sempre integrando diferentes conhecimentos em meus projetos.</p>
 
                 <div className={styles.social_media}>
                     <a href="https://github.com/Higor-H" target="_blank" rel="noreferrer"><i className='bx bxl-github'></i></a>
