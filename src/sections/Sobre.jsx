@@ -24,6 +24,18 @@ const Sobre = () => {
         setIsPopupOpen(false);
     }
 
+    function getAge(birthDate) {
+        const today = new Date();
+        const birthDateObj = new Date(birthDate);
+        let age = today.getFullYear() - birthDateObj.getFullYear();
+        const monthDiff = today.getMonth() - birthDateObj.getMonth();
+
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDateObj.getDate())) {
+            age--;
+        }
+        return age;
+    }
+
 
     useEffect(()=>{
         ScrollReveal({
@@ -37,7 +49,7 @@ const Sobre = () => {
 
     useEffect(() => {
         let typed = new Typed("#typed_text_sobre", {
-            strings: ["Desenvolvedor Front-End", "Designer", "Progamador", "Desenvolvedor Back-End"],
+            strings: ["Gosto de trabalhar em equipe", "Comunicativo", "Liderança de projetos", "Resolução de problemas", "Adaptável e flexível", "Pensamento crítico"],
             typeSpeed: 40,
             backSpeed: 100,
             backDelay: 1000,
@@ -62,7 +74,7 @@ const Sobre = () => {
                 <h3>
                     <span id='typed_text_sobre' >s</span>
                 </h3>
-                <p>Sou Higor Milani, tenho 19 anos e curso Ciências da Computação na ATITUS, tento sempre abraçar o diferente, gosto de aprender e vivenciar coisas novas, sempre que aprendo algo novo eu tento implementar ou fazer algo útil com esse conhecimento. Eu amo tecnologia, poesia, arte, café e gatos.
+                <p>Sou Higor Milani, tenho {getAge('2004-08-15')} anos e curso Ciências da Computação na ATITUS, tento sempre abraçar o diferente, gosto de aprender e vivenciar coisas novas, sempre que aprendo algo novo eu tento implementar ou fazer algo útil com esse conhecimento. Eu amo tecnologia, poesia, arte, café e gatos.
                 </p>
                 <span onClick={openPopup} ><Btn  text_btn={"Leia mais"} /></span>
                 
