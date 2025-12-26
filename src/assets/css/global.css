@@ -47,6 +47,27 @@ span{
     display: inline-flex;
 }
 
+/* Largura da scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Fundo da scrollbar */
+::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+/* Parte que se move */
+::-webkit-scrollbar-thumb {
+    background: #acacac;
+    border-radius: 10px;
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+}
+
 
 /*==*/
 @media(max-width: 1200px){
