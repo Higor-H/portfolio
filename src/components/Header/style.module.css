@@ -4,11 +4,12 @@
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    backdrop-filter: blur(10px);
+    background: #1f242df2;
 }
 
 
