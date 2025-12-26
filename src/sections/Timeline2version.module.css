@@ -1,0 +1,456 @@
+:root {
+    --color-work: #64ffda;
+    /*--color-course: #ff6b6b;*/
+    --color-course: #FF5C5C;
+
+    --timeline-course: #00C2FF;
+    --timeline-certification: #F7D101;
+    --timeline-academic: #8B5CF6;
+    --timeline-work: #22C55E;
+
+}
+
+.timeline {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    background: var(--bg-color);
+}
+
+.timelineContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.timelineTitle {
+    font-size: 4.5rem;
+    color: var(--texto-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: 700;
+}
+
+.timelineTitle i {
+    color: var(--main-color);
+}
+
+.timelineSubtitle {
+    text-align: center;
+    color: var(--texto-color);
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+    opacity: 0.8;
+}
+
+.timelineWrapper {
+    position: relative;
+    overflow-x: auto;
+    padding: 2rem 0 4rem 0;
+    border: 2px solid;
+    border-color: var(--segunda-bg-color);
+    border-radius: 11px;
+}
+
+/* Legenda */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--texto-color);
+    font-size: 1.4rem;
+}
+
+.legendItem span{
+    color: var(--texto-color);
+}
+
+.legendColor {
+    width: 2rem;
+    height: 0.8rem;
+    border-radius: 0.4rem;
+}
+
+/* Container de eventos */
+.eventsContainer {
+    position: relative;
+    min-height: 25rem;
+    margin-left: 2rem;
+    background-image: linear-gradient(90deg, var(--bg-color) 0, var(--bg-color) 99px, var(--segunda-bg-color) 100px);
+    background-size: 100px 100px;
+}
+
+/* Linhas de grid */
+.gridLines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.gridLine {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: var(--segunda-bg-color);
+}
+
+/* Rows de eventos */
+.eventsRow {
+    position: relative;
+    height: 8rem;
+    margin-bottom: 1rem;
+}
+
+/* Item de evento */
+.eventItem {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.eventBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.8rem;
+    border-radius: 0.4rem;
+    transition: height 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.eventItem:hover .eventBar {
+    height: 1.2rem;
+    box-shadow: 0 0 1.5rem var(--main-color);
+}
+
+.eventContent {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.eventPeriod {
+    display: block;
+    color: var(--texto-color);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+    opacity: 0.7;
+}
+
+.eventInstitution {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.2rem 0;
+}
+
+.eventTitle {
+    color: var(--texto-color);
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-1rem);
+    background: var(--segunda-bg-color);
+    border: 0.2rem solid var(--main-color);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    min-width: 20rem;
+    max-width: 30rem;
+    white-space: normal;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0.8rem solid transparent;
+    border-top-color: var(--main-color);
+}
+
+.tooltipBottom {
+    bottom: auto;
+    top: 100%;
+    transform: translateX(-50%) translateY(1rem);
+}
+
+.tooltipBottom::after {
+    top: auto;
+    bottom: 100%;
+    border-top-color: transparent;
+    border-bottom-color: var(--main-color);
+}
+
+.eventItem:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.tooltip i {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.tooltip h3 {
+    color: var(--texto-color);
+    font-size: 1.6rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.tooltip h4 {
+    color: var(--main-color);
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
+}
+
+.tooltip p {
+    color: var(--texto-color);
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Track de anos */
+.yearsTrack {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 2rem;
+    border-top: 0.1rem solid var(--segunda-bg-color);
+}
+
+.yearItem {
+    position: relative;
+    color: var(--texto-color);
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    padding-top: 1rem;
+    text-indent: -1.2rem;
+    opacity: 0.7;
+}
+
+.yearItem::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    width: 0.1rem;
+    height: 1rem;
+    background: var(--main-color);
+}
+
+/* Cores por tipo - Barras */
+.eventBarEducation {
+    background: var(--main-color);
+}
+
+.eventBarWork {
+    background: var(--color-work);
+}
+
+.eventBarCourse {
+    background: var(--color-course);
+}
+
+.eventBarCertification {
+    background: var(--timeline-certification);
+}
+
+.eventBarAcademic {
+    background: var(--timeline-academic);
+}
+
+/* Cores por tipo - Instituição */
+.institutionEducation {
+    color: var(--main-color);
+}
+
+.institutionWork {
+    color: var(--color-work);
+}
+
+.institutionCourse {
+    color: var(--color-course);
+}
+.institutionCertification {
+    color: var(--timeline-certification);
+}
+
+.institutionAcademic {
+    color: var(--timeline-academic);
+}
+
+/* Cores por tipo - Legenda */
+.legendEducation {
+    background: var(--main-color);
+}
+
+.legendWork {
+    background: var(--color-work);
+}
+
+.legendCourse {
+    background: var(--color-course);
+}
+.legendCertification {
+    background: var(--timeline-certification);
+}
+
+.legendAcademic {
+    background: var(--timeline-academic);
+}
+
+/* Hover por tipo */
+.eventItem:hover .eventBarEducation {
+    box-shadow: 0 0 1.5rem var(--main-color);
+}
+
+.eventItem:hover .eventBarAcademic {
+    box-shadow: 0 0 1.5rem var(--timeline-academic);
+}
+
+.eventItem:hover .eventBarWork {
+    box-shadow: 0 0 1.5rem var(--color-work);
+}
+
+.eventItem:hover .eventBarCourse {
+    box-shadow: 0 0 1.5rem var(--color-course);
+}
+
+.linkOut {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.linkOut i{
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    display: inline;
+}
+
+.linkOut:hover{
+    text-decoration: underline;
+}
+
+.validationText {
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 960px) {
+    .timeline {
+        padding: 10rem 3% 1.5rem;
+    }
+
+    .timelineTitle {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .timelineTitle {
+        font-size: 3rem;
+    }
+
+    .timelineSubtitle {
+        font-size: 1.4rem;
+    }
+
+    .legend {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .legendItem {
+        font-size: 1.2rem;
+    }
+
+    .eventsRow {
+        height: 7rem;
+    }
+
+    .eventContent {
+        padding: 0.3rem 0.8rem;
+    }
+
+    .eventPeriod,
+    .eventTitle {
+        font-size: 1rem;
+    }
+
+    .eventInstitution {
+        font-size: 1.1rem;
+    }
+
+    .tooltip {
+        min-width: 15rem;
+        max-width: 20rem;
+        padding: 1rem;
+    }
+
+    .tooltip h3 {
+        font-size: 1.4rem;
+    }
+
+    .tooltip h4 {
+        font-size: 1.2rem;
+    }
+
+    .tooltip p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 610px) {
+    .timelineTitle {
+        font-size: 2.5rem;
+    }
+
+    .legend {
+        gap: 1rem;
+    }
+
+    .legendItem {
+        font-size: 1.1rem;
+    }
+}
