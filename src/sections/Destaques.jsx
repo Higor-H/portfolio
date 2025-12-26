@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import {useEffect, useState} from 'react';
 
 import styles from "./Destaques.module.css";
 
@@ -13,22 +13,14 @@ const Destaques = () =>{
     const c = "./img/Destaques/destaque3.png";
     const d = "./img/Destaques/destaque4.png";
 
-    function changeBanner() {
-        
-        if (banner1 === a) {
-            setBanner1(b);
-        } else {
-            setBanner1(a);
-        }
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setBanner1(prev => (prev === a ? b : a));
+            setBanner2(prev => (prev === c ? d : c));
+        }, 5000);
 
-        if (banner2 === c) {
-            setBanner2(d);
-        } else {
-            setBanner2(c);
-        }
-        
-    }
-    setInterval(changeBanner, 5000);
+        return () => clearInterval(intervalId);
+    }, []);
 
 
     return(
