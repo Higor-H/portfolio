@@ -1,4 +1,4 @@
-import styles from "./Timeline2version.module.css";
+import styles from "./Timeline.module.css";
 import SectionHeader from "../components/Sections_Header/index.jsx";
 
 function Timeline() {
