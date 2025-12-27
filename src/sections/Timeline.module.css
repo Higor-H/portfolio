@@ -175,7 +175,11 @@
     left: 50%;
     transform: translateX(-50%) translateY(-1rem);
     background: var(--segunda-bg-color);
-    border: 0.2rem solid var(--main-color);
+
+    /* Define a cor do tema (padrão) */
+    --tooltip-theme: var(--main-color);
+
+    border: 0.2rem solid var(--tooltip-theme);
     border-radius: 2rem;
     padding: 1.5rem;
     min-width: 20rem;
@@ -185,7 +189,7 @@
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     z-index: 100;
-    box-shadow: 0 0 2rem var(--main-color);
+    box-shadow: 0 0 2rem var(--tooltip-theme);
 }
 
 .tooltip::after {
@@ -195,7 +199,7 @@
     left: 50%;
     transform: translateX(-50%);
     border: 0.8rem solid transparent;
-    border-top-color: var(--main-color);
+    border-top-color: var(--tooltip-theme);
 }
 
 .tooltipBottom {
@@ -208,7 +212,7 @@
     top: auto;
     bottom: 100%;
     border-top-color: transparent;
-    border-bottom-color: var(--main-color);
+    border-bottom-color: var(--tooltip-theme);
 }
 
 .eventItem:hover .tooltip {
@@ -219,7 +223,7 @@
 
 .tooltip i {
     font-size: 2rem;
-    color: var(--main-color);
+    color: var(--tooltip-theme);
     margin-bottom: 1rem;
     display: block;
 }
@@ -232,7 +236,7 @@
 }
 
 .tooltip h4 {
-    color: var(--main-color);
+    color: var(--tooltip-theme);
     font-size: 1.4rem;
     font-weight: normal;
     margin: 0 0 1rem 0;
@@ -246,6 +250,21 @@
     opacity: 0.8;
 }
 
+/* Classes de cores específicas para o Tooltip */
+.tooltipEducation { --tooltip-theme: var(--main-color); }
+.tooltipWork { --tooltip-theme: var(--color-work); }
+.tooltipCourse { --tooltip-theme: var(--color-course); }
+.tooltipCertification { --tooltip-theme: var(--timeline-certification); }
+.tooltipAcademic { --tooltip-theme: var(--timeline-academic); }
+
+/* Link dentro do tooltip segue a cor do tema */
+.tooltip .linkOut {
+    color: var(--tooltip-theme);
+    border: 2px solid;
+    padding: 3px;
+    border-radius: 9px;
+}
+
 /* Track de anos */
 .yearsTrack {
     display: flex;
@@ -256,6 +275,7 @@
 }
 
 .yearItem {
+    flex-shrink: 0;
     position: relative;
     color: var(--texto-color);
     font-size: 1.2rem;
@@ -359,16 +379,24 @@
     color: var(--main-color);
     text-decoration: none;
     font-weight: 600;
+    transition: 0.3s;
 }
 
 .linkOut i{
     font-size: 1.2rem;
     margin-bottom: 0;
     display: inline;
+    transition: 0.3s;
 }
 
 .linkOut:hover{
-    text-decoration: underline;
+    background: var(--tooltip-theme);
+    color: var(--segunda-bg-color);
+    border-color: var(--tooltip-theme);
+}
+
+.linkOut:hover i {
+    color: var(--segunda-bg-color);
 }
 
 .validationText {
@@ -393,7 +421,7 @@
     }
 
     .timelineSubtitle {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .legend {
