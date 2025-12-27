@@ -214,11 +214,165 @@ function Timeline() {
             url: null,
             validation: null
         },
+        {
+            id: 15,
+            type: 'course',
+            row: 7,
+            icon: 'bx bxs-microchip',
+            title: 'Curso de eletrônica, manutenção e configuração de computadores',
+            institution: 'Método MW 4.0',
+            period: '2025',
+            startYear: 2025,
+            duration: 1,
+            description: 'Limpeza, manutenção, montagem, configuração de hardware e software, redes de computadores e segurança da informação',
+            url: 'https://hotmart.com/pt-br/club/metodo-mw-40/product/2206949/certificate/57514c09-fc38-4e9d-bb81-7bc6d33ea515--635568224/validate',
+            validation: null
+        },
+        {
+            id: 16,
+            type: 'course',
+            row: 2,
+            icon: 'bx bxl-java',
+            title: 'Boas práticas de programação: melhore o código de uma API Java',
+            institution: 'Alura',
+            period: '2024',
+            startYear: 2024,
+            duration: 1,
+            description: 'Boas práticas de arquitetura e persistência, incluindo separação de responsabilidades, uso de DTO, validações flexíveis e otimizações de desempenho',
+            url: 'https://cursos.alura.com.br/certificate/higor-milani/boas-praticas-programacao-melhore-codigo-api-java',
+            validation: null
+        },
+        {
+            id: 17,
+            type: 'course',
+            row: 4,
+            icon: 'bx bxl-java',
+            title: 'Java e refatoração: melhorando códigos com boas práticas',
+            institution: 'Alura',
+            period: '2024',
+            startYear: 2024,
+            duration: 1,
+            description: 'Práticas de engenharia de software, com foco em refatoração, princípios SOLID, modelagem de domínios, testes automatizados e padrões de projeto',
+            url: 'https://cursos.alura.com.br/certificate/higor-milani/java-refatoracao-melhorando-codigos-boas-praticas',
+            validation: null
+        },
+        {
+            id: 18,
+            type: 'certification',
+            row: 8,
+            icon: 'bx bx-shield-quarter',
+            title: 'Qualificação em Arquitetura de Soluções em Cloud',
+            institution: 'Atitus Educação',
+            period: '2024',
+            startYear: 2024,
+            duration: 1,
+            description: 'Estudos em comportamento e fatores humanos no desenvolvimento de software, fundamentos de cibersegurança e computação em nuvem (SaaS, PaaS, IaaS), com foco em arquitetura, gestão e segurança de sistemas escaláveis, pentesting, kali Linux e redes',
+            url: 'https://atitusvalidador.web.app/',
+            validation: 'cc47d4a3db41'
+        },
+        {
+            id: 19,
+            type: 'course',
+            row: 5,
+            icon: 'bx bx-shield-quarter',
+            title: 'Programa Hackers do Bem - Fundamental',
+            institution: 'Hackers do Bem | RNP | GovBR',
+            period: '2024',
+            startYear: 2024,
+            duration: 1,
+            description: 'Fundamentos de segurança da informação, cobrindo ameaças e malwares, controles de acesso, IAM, criptografia, redes e hosts seguros, proteção web, backups, PKI/Blockchain e resposta a incidentes',
+            url: 'https://ava.hackersdobem.org.br/badges/badge.php?hash=5eaaeb9219184eee57ab0601dee87abdb7cd27cc',
+            validation: null
+        },
+        {
+            id: 20,
+            type: 'course',
+            row: 7,
+            icon: 'bx bx-shield-quarter',
+            title: 'Programa Hackers do Bem - Nivelamento',
+            institution: 'Hackers do Bem | RNP | GovBR',
+            period: '2024',
+            startYear: 2024,
+            duration: 1,
+            description: 'Fundamentos de cibersegurança, redes de computadores (TCP/IP, IPv6), hardware, Windows e Linux, além de lógica de programação e desenvolvimento de scripts',
+            url: 'https://ava.hackersdobem.org.br/badges/badge.php?hash=3feb070ed8e6f9cef27543405d9faf48adaacecc',
+            validation: null
+        },
+        {
+            id: 21,
+            type: 'course',
+            row: 1,
+            icon: 'bx bxl-aws',
+            title: 'AWS Academy Graduate - Introduction to Cloud Semester 1 - Training Badge',
+            institution: 'AWS Academy',
+            period: '2024',
+            startYear: 2024,
+            duration: 1,
+            description: 'Curso introdutório de AWS Cloud, abordando fundamentos de cloud computing, arquitetura, segurança, custos, suporte e uso do AWS Management Console em cenários práticos',
+            url: 'https://www.credly.com/badges/133ede12-4023-423b-9dab-e206664835d1/print',
+            validation: null
+        },
+        {
+            id: 22,
+            type: 'certification',
+            row: 9,
+            icon: 'bx bxl-aws',
+            title: 'Oratória nas Escolas',
+            institution: 'JCI (Junior Chamber International)',
+            period: '2021',
+            startYear: 2021,
+            duration: 1,
+            description: 'Programa de Ortória nas Escolas, focado em habilidades de comunicação e apresentação em público',
+            url: null,
+            validation: null
+        },
+        {
+            id: 23,
+            type: 'certification',
+            row: 9,
+            icon: 'bx bx-code-block',
+            title: 'Qualificação em Desenvolvimento de Soluções Full Stack',
+            institution: 'Atitus Educação',
+            period: '2023',
+            startYear: 2023,
+            duration: 1,
+            description: 'Estudos em organização e abstração de código, desenvolvimento de APIs com Spring Boot, design centrado no usuário (UX) e desenvolvimento de interfaces web com React, focando usabilidade e responsividade',
+            url: 'https://atitusvalidador.web.app/',
+            validation: 'cc1353dc2730'
+        },
+        {
+            id: 24,
+            type: 'certification',
+            row: 9,
+            icon: 'bx bxs-devices',
+            title: 'Qualificação em Engenharia de Software',
+            institution: 'Atitus Educação',
+            period: '2024',
+            startYear: 2024,
+            duration: 1,
+            description: 'Desenvolvimento de comunicação técnica, design e engenharia de processos, otimização de bancos de dados e estudo de paradigmas de programação, React Native e desenvolvimento mobile, Arquitetura, documentação e metodologias ágeis',
+            url: 'https://atitusvalidador.web.app/',
+            validation: 'cc9fbf2b7bfe'
+        },
+        {
+            id: 25,
+            type: 'certification',
+            row: 9,
+            icon: 'bx bx-bot',
+            title: 'Qualificação em Inteligência Artificial, Machine Learning e Big Data',
+            institution: 'Atitus Educação',
+            period: '2025',
+            startYear: 2025,
+            duration: 1,
+            description: 'Conhecimentos em inteligência artificial e machine learning (redes neurais, CNNs, regressão, análise de dados com Python), gestão de projetos baseada no PMBOK e métodos ágeis, e Big Data com Hadoop, Spark, Databricks e NoSQL',
+            url: 'https://atitusvalidador.web.app/',
+            validation: 'cc7f06a17681'
+        }
     ]
 
     // Configuração da timeline
     const startYear = 2016;
-    const endYear = new Date().getFullYear() ;
+    const endYear = new Date().getFullYear() +1 ;
     const years = [];
     for (let year = startYear; year <= endYear; year += 2) {
         years.push(year);
@@ -265,6 +419,14 @@ function Timeline() {
         course: styles.legendCourse,
         certification: styles.legendCertification,
         academic: styles.legendAcademic
+    };
+    
+    const typeTooltipClasses = {
+        education: styles.tooltipEducation,
+        work: styles.tooltipWork,
+        course: styles.tooltipCourse,
+        certification: styles.tooltipCertification,
+        academic: styles.tooltipAcademic
     };
 
     return (
@@ -329,7 +491,7 @@ function Timeline() {
                                             <h4 className={styles.eventTitle}>{item.title}</h4>
                                         </div>
                                         {/* Tooltip */}
-                                        <div className={`${styles.tooltip} ${rowIndex <= 1 ? styles.tooltipBottom : ''}`}>
+                                        <div className={`${styles.tooltip} ${typeTooltipClasses[item.type]} ${rowIndex <= 4 ? styles.tooltipBottom : ''}`}>
                                             <i className={item.icon}></i>
                                             <h3>{item.title}</h3>
                                             <h4 className={typeInstitutionClasses[item.type]}>{item.institution}</h4>
