@@ -7,7 +7,7 @@ import PortfolioSec from "../sections/Portfolio_sec";
 import Destaques from "../sections/Destaques";
 import Contato from "../sections/Contato";
 import Footer from "../components/Footer";
-import Timeline from "../sections/Timeline2version.jsx";
+import Timeline from "../sections/Timeline.jsx";
 
 
 const Portfolio = () => {
