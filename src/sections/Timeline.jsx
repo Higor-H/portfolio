@@ -27,18 +27,22 @@ function Timeline() {
     };
 
     // Agrupar eventos por row com ID único para evitar key index
-    const maxRow = timelineData.reduce((max, item) => Math.max(max, item.row), 0);
-    const rows = Array.from({ length: maxRow }, (_, i) => ({
-        id: `row-${i + 1}`,
-        events: []
-    }));
+    let rows = [];
 
-    timelineData.forEach(item => {
-        if (item.row > 0) {
-            rows[item.row - 1].events.push(item);
-        }
-    });
+    if (Array.isArray(timelineData) && timelineData.length > 0) {
+        const maxRow = timelineData.reduce((max, item) => Math.max(max, item.row), 0);
 
+        rows = Array.from({ length: maxRow }, (_, i) => ({
+            id: `row-${i + 1}`,
+            events: []
+        }));
+
+        timelineData.forEach(item => {
+            if (item.row > 0 && rows[item.row - 1]) {
+                rows[item.row - 1].events.push(item);
+            }
+        });
+    }
     // Mapeamento de tipos para classes CSS
     const typeBarClasses = {
         education: styles.eventBarEducation,
@@ -134,7 +138,7 @@ function Timeline() {
                                             <h4 className={styles.eventTitle}>{item.title}</h4>
                                         </div>
                                         {/* Tooltip */}
-                                        <div className={`${styles.tooltip} ${typeTooltipClasses[item.type]} ${rowIndex <= 4 ? styles.tooltipBottom : ''}`}>
+                                        <div className={`${styles.tooltip} ${typeTooltipClasses[item.type]} ${rowIndex <= 4 ? styles.tooltipBottom : ''}`}> {/*(<= 4 posicionar para baixo se estiver nas primeiras 4 linhas)*/}
                                             <i className={item.icon}></i>
                                             <h3>{item.title}</h3>
                                             <h4 className={typeInstitutionClasses[item.type]}>{item.institution}</h4>
