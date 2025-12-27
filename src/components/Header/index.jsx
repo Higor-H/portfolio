@@ -58,7 +58,7 @@ const Header = () => {
             <nav className={isMenuOpen ? "navbar ativa" : "navbar"}>
                 <a href="#home" className="ativa">Home</a>
                 <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
+                <a href="#timeline">Linha do Tempo</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#destaques">Destaques</a>
                 <a href="#contato">Contato</a>

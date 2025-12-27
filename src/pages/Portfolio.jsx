@@ -19,7 +19,7 @@ const Portfolio = () => {
             <Home/>
             <Sobre/>
             <Timeline />
-            <Servicos/>
+            {/*<Servicos/>*/}
             <PortfolioSec/>
             <Destaques/>
             <Contato/>

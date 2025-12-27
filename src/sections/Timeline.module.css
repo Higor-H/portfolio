@@ -44,6 +44,14 @@
     opacity: 0.8;
 }
 
+.timelineSubtitle a{
+    text-decoration: underline;
+}
+
+.timelineSubtitle a:hover{
+    color: var(--main-color);
+}
+
 .timelineWrapper {
     position: relative;
     overflow-x: auto;

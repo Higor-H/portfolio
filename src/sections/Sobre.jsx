@@ -76,7 +76,7 @@ const Sobre = () => {
                 </h3>
                 <p>Sou Higor Milani, tenho {getAge('2004-08-15')} anos e curso Ciências da Computação na ATITUS, tento sempre abraçar o diferente, gosto de aprender e vivenciar coisas novas, sempre que aprendo algo novo eu tento implementar ou fazer algo útil com esse conhecimento. Eu amo tecnologia, poesia, arte, café e gatos.
                 </p>
-                <span onClick={openPopup} ><Btn  text_btn={"Leia mais"} /></span>
+                {/*<span onClick={openPopup} ><Btn  text_btn={"Leia mais"} /></span>*/}
                 
             </div>
             
