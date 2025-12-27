@@ -26,12 +26,18 @@ function Timeline() {
         return { left: `${left}px`, width: `${width}px` };
     };
 
-    // Agrupar eventos por row
-    const rows = timelineData.reduce((acc, item) => {
-        acc[item.row - 1] ??= [];
-        acc[item.row - 1].push(item);
-        return acc;
-    }, []);
+    // Agrupar eventos por row com ID único para evitar key index
+    const maxRow = timelineData.reduce((max, item) => Math.max(max, item.row), 0);
+    const rows = Array.from({ length: maxRow }, (_, i) => ({
+        id: `row-${i + 1}`,
+        events: []
+    }));
+
+    timelineData.forEach(item => {
+        if (item.row > 0) {
+            rows[item.row - 1].events.push(item);
+        }
+    });
 
     // Mapeamento de tipos para classes CSS
     const typeBarClasses = {
@@ -111,9 +117,9 @@ function Timeline() {
                         </div>
 
                         {/* Rows de eventos */}
-                        {rows.map((rowEvents, rowIndex) => (
-                            <div key={rowIndex} className={styles.eventsRow}>
-                                {rowEvents.map((item) => (
+                        {rows.map((row, rowIndex) => (
+                            <div key={row.id} className={styles.eventsRow}>
+                                {row.events.map((item) => (
                                     <div
                                         key={item.id}
                                         className={styles.eventItem}
