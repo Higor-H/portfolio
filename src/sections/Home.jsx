@@ -11,7 +11,7 @@ const Home = () => {
 
     const typedRef = useRef(null);
 
-   const scrollRevealRef = useRef(null);
+    const scrollRevealRef = useRef(null);
 
     useEffect(()=>{
         const sr = ScrollReveal({
@@ -77,12 +77,10 @@ const Home = () => {
                     sempre integrando diferentes conhecimentos em meus projetos.</p>
 
                 <div className={styles.social_media}>
-                    <a href="https://github.com/Higor-H" target="_blank" rel="noreferrer"><i className='bx bxl-github'></i></a>
-                    <a href="https://linktr.ee/Higor_Milani" target="_blank" rel="noreferrer"><i className='bx bxs-tree'></i></a>
-                    <a href="https://www.instagram.com/higor.milani/" target="_blank" rel="noreferrer"><i
-                        className='bx bxl-instagram'></i></a>
-                    <a href="https://www.linkedin.com/in/higor-milani/" target="_blank" rel="noreferrer"><i
-                        className='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Higor-H" target="_blank" rel="noreferrer"  aria-label="GitHub de Higor Milani"><i className='bx bxl-github' aria-hidden="true"></i></a>
+                    <a href="https://linktr.ee/Higor_Milani" target="_blank" rel="noreferrer" aria-label="Linktree de Higor Milani"><i className='bx bxs-tree' aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/higor.milani/" target="_blank" rel="noreferrer" aria-label="Instagram de Higor Milani"><i className='bx bxl-instagram' aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/higor-milani/" target="_blank" rel="noreferrer"  aria-label="LinkedIn de Higor Milani"><i className='bx bxl-linkedin' aria-hidden="true"></i></a>
                 </div>
 
                 <Btn url={"./img/Currículo-Higor_Milani.pdf"} text_btn={"Download CV"}
