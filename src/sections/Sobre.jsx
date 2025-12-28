@@ -3,7 +3,7 @@ import  { useState, useEffect } from 'react';
 import ScrollReveal from "scrollreveal";
 import Typed from "typed.js";
 
-import Btn from "../components/Btn";
+// import Btn from "../components/Btn";
 import Card from "../components/Card";
 import SectionHeader from '../components/Sections_Header';
 
@@ -16,9 +16,9 @@ const Sobre = () => {
 
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    function openPopup() {
-        setIsPopupOpen(true);
-    }
+    // function openPopup() {
+    //     setIsPopupOpen(true);
+    // }
 
     function closePopup() {
         setIsPopupOpen(false);
