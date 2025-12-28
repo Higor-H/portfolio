@@ -11,10 +11,15 @@ import "./assets/css/global.css";
 import "./assets/css/variables.css";
 import "./assets/css/header.css";
 import "./assets/css/popup.css";
-//Boxicon import in index.html
+import 'boxicons/css/boxicons.min.css';
 
+const rootElement = document.getElementById('root');
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+if (!rootElement) {
+    throw new Error("Root element '#root' not found");
+}
+
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />

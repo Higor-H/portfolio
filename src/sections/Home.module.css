@@ -58,7 +58,7 @@
 }
 
 .typed_text{
-    position: absolute;
+    position: relative;
 }
 .none{
     color: var(--transparent-color);
@@ -113,9 +113,8 @@
 
     .home_img{
         width: 40vw;
-        
-        margin: auto;
-        margin-bottom: 4rem;
+
+        margin: auto auto 4rem;
     }
 
     .social_media{
@@ -128,12 +127,9 @@
         font-size: 4rem;
         width: 6rem;
         height: 6rem;
-        margin-top: 3.125rem;
-        margin-bottom: 4.125rem;
-        margin-left: 3.125rem;
-        margin-right: 3.125rem;
-       
-        
+        margin: 3.125rem 3.125rem 4.125rem;
+
+
     }
 
 
@@ -145,14 +141,19 @@
 
     .home_img{
         width: auto;
-        padding: auto;
-        margin: auto;
-        margin-bottom: 4rem;
+        padding: 0;
+        margin: auto auto 4rem;
     }
 
     .home_img{
         margin-top: 50px;
     }
+
+    .typedWrapper {
+        line-height: 1.3;
+        min-height: calc(1.3em * 3);
+    }
+
     
     
 }
@@ -168,10 +169,7 @@
         font-size: 3rem;
         width: 5rem;
         height: 5rem;
-        margin-top: 3rem;
-        margin-bottom: 4rem;
-        margin-left: 3rem;
-        margin-right: 3rem;
+        margin: 3rem 3rem 4rem;
     }
 }
 

@@ -42,10 +42,30 @@ span{
    
 }
 
-.typed-cursor,.typed-cursor typed-cursor--blink{
-    display: none;
+.typed-cursor,.typed-cursor .typed-cursor--blink{
     color: #1f242d00;
     display: inline-flex;
+}
+
+/* Largura da scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Fundo da scrollbar */
+::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+/* Parte que se move */
+::-webkit-scrollbar-thumb {
+    background: #acacac;
+    border-radius: 10px;
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
 }
 
 

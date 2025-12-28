@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
-
-import ScrollReveal from "scrollreveal";
+import  { useState } from 'react';
 
 
 import styles from "./Servicos.module.css";
 
-import Section_Header from '../components/Sections_Header';
+import SectionHeader from '../components/Sections_Header';
 import Btn from "../components/Btn";
 import {data} from "../data";
 
@@ -14,46 +12,38 @@ const Servicos = () => {
 
     const [id, setId] = useState(null);
 
-    const [isPopupOpen, setPopupOpen] = useState(false);
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
 
     function openPopup(id) {
-        setPopupOpen(true);
+        setIsPopupOpen(true);
         setId(id)
     }
 
     function closePopup() {
-        setPopupOpen(false);
+        setIsPopupOpen(false);
         setId(null)
     }
 
-    /*
-    useEffect(()=>{
-        ScrollReveal({
-            distance: '100px',
-            duration: 2000,
-            delay: 10,
-        });
-        ScrollReveal().reveal(".scroll_conteiner",{origin: 'bottom'});
-    }, []);
-    
-*/
 
     //
 
     return(
         <section id="servicos" className={styles.servicos} >
             <div className='scroll_conteiner'>
-            <Section_Header title={"Meus "} span={"Serviços"}/>
+            <SectionHeader title={"Meus "} span={"Serviços"}/>
             <div  className={styles.servicos_conteiner}>
 
-                {data.servicos.map((item, index) =>(
-                <div key={index} className={styles.servico_box_index}>
+                {data.servicos.map((item) =>(
+                <div key={item.id} className={styles.servico_box_index}>
                     <div  className={styles.servico_box}> 
                         <i className={item.icon}></i>
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
-                        <span onClick={() => openPopup(item.id)} ><Btn  text_btn={"Leia mais"}/></span>
+                        <Btn
+                            text_btn="Leia mais"
+                            onClick={() => openPopup(item.id)}
+                        />
                     </div>
 
                     {isPopupOpen && item.id === id && (
@@ -65,7 +55,7 @@ const Servicos = () => {
                                         <h3>Um pouco sobre</h3>
                                         <h1>{item.popup_title}</h1>
                                         
-                                        <h3><cite>"{item.popup_cite} <span>{item.popup_cite_span}</span>"</cite></h3>
+                                        <h3><cite>&#34;{item.popup_cite} <span>{item.popup_cite_span}</span>&#34;</cite></h3>
                                         <p>{item.popup_cite_author}</p>
                                     </div>
                                     <div className={styles.img}>

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 
 import ScrollReveal from "scrollreveal";
 import Typed from "typed.js";
 
-import Btn from "../components/Btn";
+// import Btn from "../components/Btn";
 import Card from "../components/Card";
-import Section_Header from '../components/Sections_Header';
+import SectionHeader from '../components/Sections_Header';
 
 import {data} from "../data";
 
@@ -14,14 +14,26 @@ import styles from "./Sobre.module.css";
 
 const Sobre = () => {
 
-    const [isPopupOpen, setPopupOpen] = useState(false);
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    function openPopup() {
-        setPopupOpen(true);
-    }
+    // function openPopup() {
+    //     setIsPopupOpen(true);
+    // }
 
     function closePopup() {
-        setPopupOpen(false);
+        setIsPopupOpen(false);
+    }
+
+    function getAge(birthDate) {
+        const today = new Date();
+        const birthDateObj = new Date(birthDate);
+        let age = today.getFullYear() - birthDateObj.getFullYear();
+        const monthDiff = today.getMonth() - birthDateObj.getMonth();
+
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDateObj.getDate())) {
+            age--;
+        }
+        return age;
     }
 
 
@@ -36,8 +48,8 @@ const Sobre = () => {
     });
 
     useEffect(() => {
-        var typed = new Typed("#typed_text_sobre", {
-            strings: ["Desenvolvedor Front-End", "Designer", "Progamador", "Desenvolvedor Back-End"],
+        let typed = new Typed("#typed_text_sobre", {
+            strings: ["Gosto de trabalhar em equipe", "Comunicativo", "Liderança de projetos", "Resolução de problemas", "Adaptável e flexível", "Pensamento crítico"],
             typeSpeed: 40,
             backSpeed: 100,
             backDelay: 1000,
@@ -57,14 +69,14 @@ const Sobre = () => {
             </div>
             <div className={styles.sobre_conteiner} >
 
-                <Section_Header title={"Sobre "} span={"mim!"}/>
+                <SectionHeader title={"Sobre "} span={"mim!"}/>
                 
                 <h3>
                     <span id='typed_text_sobre' >s</span>
                 </h3>
-                <p>Sou Higor Milani, tenho 19 anos e curso Ciências da Computação na ATITUS, tento sempre abraçar o diferente, gosto de aprender e vivenciar coisas novas, sempre que aprendo algo novo eu tento implementar ou fazer algo útil com esse conhecimento. Eu amo tecnologia, poesia, arte, café e gatos.
+                <p>Sou Higor Milani, tenho {getAge('2004-08-15')} anos e curso Ciências da Computação na ATITUS, tento sempre abraçar o diferente, gosto de aprender e vivenciar coisas novas, sempre que aprendo algo novo eu tento implementar ou fazer algo útil com esse conhecimento. Eu amo tecnologia, poesia, arte, café e gatos.
                 </p>
-                <span onClick={openPopup} ><Btn  text_btn={"Leia mais"} /></span>
+                {/*<span onClick={openPopup} ><Btn  text_btn={"Leia mais"} /></span>*/}
                 
             </div>
             
@@ -75,7 +87,7 @@ const Sobre = () => {
                     <div  className="popup_content" >
                         <span className="close" onClick={closePopup} >&times;</span>
                         <section className="popup_layout">
-                                <Section_Header title={"Meus "} span={"Cursos"}/>
+                                <SectionHeader title={"Meus "} span={"Cursos"}/>
                                 <div className={styles.course_conteiner} >
                                     {data.sobre.map((item, index) =>(
                                         <Card key={index}  url={item.url} title={item.title} organization={item.organization} validation={item.validation}  />
