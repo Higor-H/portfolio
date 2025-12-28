@@ -8,7 +8,7 @@ const Card_Portfolio = ({img, title, description, url, download=null }) => {
             <div className={styles.Card_Portfolio_conteiner}>
                 <h4>{title}</h4>
                 <p>{description}</p>
-                <a href={url} target="_blank" download={download} rel="noreferrer"><i className='bx bx-link-external'></i></a>
+                <a href={url} target="_blank" download={download} rel="noreferrer" aria-label={`Link para o projeto ${title}`}><i className='bx bx-link-external' aria-hidden="true"></i></a>
             </div>
         </div>
     )

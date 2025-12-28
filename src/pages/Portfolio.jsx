@@ -15,7 +15,7 @@ const Portfolio = () => {
     return (
         <>
             <Header/>
-
+            <main>
             <Home/>
             <Sobre/>
             <Timeline />
@@ -23,7 +23,7 @@ const Portfolio = () => {
             <PortfolioSec/>
             <Destaques/>
             <Contato/>
-
+            </main>
 
             <Footer/>
         </>
