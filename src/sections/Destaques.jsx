@@ -1,17 +1,19 @@
 import {useEffect, useState} from 'react';
+import {useTranslation} from "react-i18next";
 
 import styles from "./Destaques.module.css";
 
 import SectionHeader from '../components/Sections_Header';
 
 const Destaques = () =>{
+    const { t } = useTranslation();
 
-    const [banner1, setBanner1] = useState("./img/Destaques/destaque2.png");
-    const [banner2, setBanner2] = useState("./img/Destaques/destaque3.png");
-    const a = "./img/Destaques/destaque2.png";
-    const b = "./img/Destaques/destaque1.png";
-    const c = "./img/Destaques/destaque3.png";
-    const d = "./img/Destaques/destaque4.png";
+    const [banner1, setBanner1] = useState("/img/Destaques/destaque2.png");
+    const [banner2, setBanner2] = useState("/img/Destaques/destaque3.png");
+    const a = "/img/Destaques/destaque2.png";
+    const b = "/img/Destaques/destaque1.png";
+    const c = "/img/Destaques/destaque3.png";
+    const d = "/img/Destaques/destaque4.png";
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -26,7 +28,7 @@ const Destaques = () =>{
     return(
         <section id="destaques" className={styles.destaques} >
             <div className='scroll_conteiner'>
-                <SectionHeader span={"Destaques"} />
+                <SectionHeader span={t('highlights.span')} />
                 <div className={styles.destaques_conteiner}>
                     <div className={styles.banner}>
                         <img src={banner1} alt=""/>

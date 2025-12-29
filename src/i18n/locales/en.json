@@ -108,6 +108,9 @@
       }
     ]
   },
+  "highlights": {
+    "span": "Highlights"
+  },
   "services":  {
     "frontend": {
       "title": "Front-end Development",
