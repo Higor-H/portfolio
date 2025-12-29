@@ -2,7 +2,7 @@
   "homepage": "https://higor-milani.dev/",
   "name": "portfolio-higor-milani",
   "private": true,
-  "version": "2.0.0",
+  "version": "2.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
