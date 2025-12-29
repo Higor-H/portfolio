@@ -2,6 +2,14 @@
   "seo": {
     "description": "I am Higor Milani, a student at ATITUS, Test Automation and QA Engineer, as well as a Full Stack programmer, enthusiast of Cybersecurity, ML/AI, and Big Data."
   },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "timeline": "Timeline",
+    "portfolio": "Portfolio",
+    "highlights": "Highlights",
+    "contact": "Contact"
+  },
   "home": {
     "greeting": "Hello, my name is",
     "role_intro": "And I work as",
@@ -25,13 +33,21 @@
     }
 
   },
-  "header": {
-    "home": "Home",
-    "about": "About",
-    "timeline": "Timeline",
-    "portfolio": "Portfolio",
-    "highlights": "Highlights",
-    "contact": "Contact"
+  "about": {
+    "title": "About",
+    "span": "Me!",
+    "typed_text": [
+      "Team player",
+      "Communicative",
+      "Project leadership",
+      "Problem solving",
+      "Adaptable and flexible",
+      "Critical thinking"
+    ],
+    "description": "I am Higor Milani, I am {{age}} years old and I study Computer Science at ATITUS. I always try to embrace the different, I like to learn and experience new things, whenever I learn something new I try to implement or do something useful with that knowledge. I love technology, poetry, art, coffee and cats.",
+    "popup_title": "My",
+    "popup_span": "Courses",
+    "read_more": "Read more"
   },
   "services":  {
     "frontend": {
