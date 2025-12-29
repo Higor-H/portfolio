@@ -49,6 +49,22 @@
     "popup_span": "Cursos",
     "read_more": "Leia mais"
    },
+  "timeline": {
+    "title": "Minha",
+    "span": "Jornada!",
+    "subtitle": "Cursos, trabalhos e formação acadêmica",
+    "linkedin_text": "Veja mais em meu Linkedin:",
+    "legend": {
+      "education": "Educação",
+      "work": "Trabalho",
+      "course": "Cursos",
+      "certification": "Certificados e reconhecimentos"
+    },
+    "tooltip": {
+      "validation_code": "Código de validação:",
+      "certificate": "Certificado"
+    }
+  },
   "services": {
     "frontend": {
       "title": "Front-end Development",

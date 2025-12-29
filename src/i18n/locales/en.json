@@ -49,6 +49,22 @@
     "popup_span": "Courses",
     "read_more": "Read more"
   },
+  "timeline": {
+    "title": "My",
+    "span": "Journey!",
+    "subtitle": "Courses, jobs and academic background",
+    "linkedin_text": "See more on my Linkedin:",
+    "legend": {
+      "education": "Education",
+      "work": "Work",
+      "course": "Courses",
+      "certification": "Certificates and recognitions"
+    },
+    "tooltip": {
+      "validation_code": "Validation code:",
+      "certificate": "Certificate"
+    }
+  },
   "services":  {
     "frontend": {
       "title": "Front-end Development",
