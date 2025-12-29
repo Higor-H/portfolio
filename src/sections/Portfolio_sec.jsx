@@ -8,7 +8,7 @@ const Portfolio_sec = () => {
     const { t } = useTranslation();
     const portfolioItems = t('portfolio.items', { returnObjects: true });
 
-    let baseUrlImg = "./img/Portfolio/";
+    const baseUrlImg = "/img/Portfolio/";
     return(
         <section id="portfolio" className={styles.portfolio} >
             <div className='scroll_conteiner'>
