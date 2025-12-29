@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "description": "Sou Higor Milani, sou estudante da ATITUS, Automatizador de Testes e QA, além disso sou programador Fullstack, entusiasta de Cibersegurança, ML/IA e Big Data."
+  },
+  "header": {
+    "home": "Home",
+    "about": "Sobre",
+    "timeline": "Linha do Tempo",
+    "portfolio": "Portfolio",
+    "highlights": "Destaques",
+    "contact": "Contato"
+  },
+  "home": {
+    "greeting": "Olá, meu nome é",
+    "role_intro": "E atuo como",
+    "description": "Estudante de Ciências da Computação na ATITUS, apaixonado por tecnologia e desenvolvimento de software. Atuo com QA, automação de testes e desenvolvimento Full Stack, além de explorar áreas como Big Data, cibersegurança e inteligência artificial, sempre integrando diferentes conhecimentos em meus projetos.",
+    "download_cv": "Download CV",
+    "curriculum_file" : "Currículo-Higor_Milani.pdf",
+    "curriculum_name" : "Currículo - Higor Milani",
+    "roles": [
+      "Full Stack Developer",
+      "QA Engineer",
+      "Test Automation Engineer",
+      "Big Data Professional",
+      "Cybersecurity Enthusiast",
+      "AI and Machine Learning Practitioner"
+    ],
+    "links": {
+      "github": "Link para o GitHub de Higor Milani",
+      "linktree": "Link para o Linktree de Higor Milani",
+      "instagram": "Link para o Instagram de Higor Milani",
+      "linkedin": "Link para o GitHub de Higor Milani"
+    }
+
+  },
+  "about": {
+    "title": "Sobre",
+    "span": "mim!",
+    "typed_text": [
+      "Gosto de trabalhar em equipe",
+      "Comunicativo",
+      "Liderança de projetos",
+      "Resolução de problemas",
+      "Adaptável e flexível",
+      "Pensamento crítico"
+    ],
+    "description": "Sou Higor Milani, tenho {{age}} anos e curso Ciências da Computação na ATITUS, tento sempre abraçar o diferente, gosto de aprender e vivenciar coisas novas, sempre que aprendo algo novo eu tento implementar ou fazer algo útil com esse conhecimento. Eu amo tecnologia, poesia, arte, café e gatos.",
+    "popup_title": "Meus",
+    "popup_span": "Cursos",
+    "read_more": "Leia mais"
+   },
+  "timeline": {
+    "title": "Minha",
+    "span": "Jornada!",
+    "subtitle": "Cursos, trabalhos e formação acadêmica",
+    "linkedin_text": "Veja mais em meu Linkedin:",
+    "legend": {
+      "education": "Educação",
+      "work": "Trabalho",
+      "course": "Cursos",
+      "certification": "Certificados e reconhecimentos"
+    },
+    "tooltip": {
+      "validation_code": "Código de validação:",
+      "certificate": "Certificado"
+    }
+  },
+  "portfolio": {
+    "title": "Meus",
+    "span": "Projetos",
+    "items": [
+      {
+        "img": "design.jpg",
+        "title": "Design",
+        "description": "Exemplos de design feitos por mim.",
+        "url": "/img/Meus_Designs.pdf",
+        "download": "Meus Designs"
+      },
+      {
+        "img": "progamacao.jpg",
+        "title": "Programação",
+        "description": "Meu perfil no Github com projetos.",
+        "url": "https://github.com/Higor-H"
+      },
+      {
+        "img": "projetos.jpg",
+        "title": "Desenvolvimento de projetos",
+        "description": "Alguns projetos na mais diversas áreas.",
+        "url": "https://drive.google.com/drive/folders/1sGX-tHFoBiXg-cmX9VYfRX8Fc42pSY9A?usp=sharing"
+      },
+      {
+        "img": "artigos.jpg",
+        "title": "Artigos",
+        "description": "Alguns artigos e escritas sobre diversos assuntos.",
+        "url": "https://drive.google.com/drive/folders/1eXaUf3gizhU_h3i712MHS4PV0vgZss87?usp=sharing"
+      },
+      {
+        "img": "testes.jpg",
+        "title": "Testes, Automatização e QA",
+        "description": "Minha jornada na Compass UOL.",
+        "url": "https://gitlab.com/higor_sprints"
+      },
+      {
+        "img": "hardware.jpg",
+        "title": "Arduino e hardware",
+        "description": "Meus projetos com o arduino, e linguagem C.",
+        "url": "https://drive.google.com/drive/folders/1gkrOFtNQmk66OhA0RmXxzrv7UQW3wq_w?usp=sharing"
+      }
+    ]
+  },
+  "highlights": {
+    "span": "Destaques"
+  },
+  "contact": {
+    "title": "Contate",
+    "span": "Me!",
+    "description": "Ficarei feliz em ouvir de você e discutir sobre oportunidades de colaboração. Por favor, utilize os botões abaixo para me contatar por e-mail ou acessar meu perfil no LinkedIn.",
+    "linkedin_btn": "Linkedin",
+    "email_btn": "Email"
+  },
+  "footer": {
+    "copyright": "Copyright © 2026. Todos direitos reservados!",
+    "back_to_top": "Voltar para a Home"
+  },
+  "services": {
+    "frontend": {
+      "title": "Front-end Development",
+      "description": "Eu trabalho com HTML, CSS, JavaScript..."
+    }
+  }
+}

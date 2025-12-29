@@ -1,26 +1,29 @@
 import CardPortfolio from '../components/Card_Portfolio';
 import SectionHeader from '../components/Sections_Header';
+import {useTranslation} from "react-i18next";
 
 import styles from "./Portfolio_sec.module.css";
 
 const Portfolio_sec = () => {
+    const { t } = useTranslation();
+    const portfolioItems = t('portfolio.items', { returnObjects: true });
 
-
-    let baseUrlImg = "./img/Portfolio/";
+    const baseUrlImg = "/img/Portfolio/";
     return(
         <section id="portfolio" className={styles.portfolio} >
             <div className='scroll_conteiner'>
-                <SectionHeader title={"Meus "} span={"Projetos"}/>
+                <SectionHeader title={t('portfolio.title') + " "} span={t('portfolio.span')}/>
                 <div className={styles.portfolio_conteiner}>
-                    <CardPortfolio img={baseUrlImg + "design.jpg"} title={"Design"} description={"Exemplos de design feitos por mim."} url={"/img/Meus_Designs.pdf"} download={"Meus Designs"}/>
-                    <CardPortfolio img={baseUrlImg + "progamacao.jpg"} title={"Progamação"} description={"Meu perfil no Github com projetos."} url={"https://github.com/Higor-H"}/>
-                    <CardPortfolio img={baseUrlImg + "projetos.jpg"} title={"Desenvolvimento de projetos"} description={"Alguns projetos na mais diversas áreas."} url={"https://drive.google.com/drive/folders/1sGX-tHFoBiXg-cmX9VYfRX8Fc42pSY9A?usp=sharing"}/>
-                    <CardPortfolio img={baseUrlImg + "artigos.jpg"} title={"Artigos"} description={"Alguns artigos e escritas sobre diversos assuntos."} url={"https://drive.google.com/drive/folders/1eXaUf3gizhU_h3i712MHS4PV0vgZss87?usp=sharing"}/>
-                    <CardPortfolio img={baseUrlImg + "testes.jpg"} title={"Testes, Automatização e QA"} description={"Minha jornada na Compass UOL."} url={"https://gitlab.com/higor_sprints"}/>
-                    <CardPortfolio img={baseUrlImg + "hardware.jpg"} title={"Arduino e hardware"} description={"Meus projetos com o arduino, e linguagem C."} url={"https://drive.google.com/drive/folders/1gkrOFtNQmk66OhA0RmXxzrv7UQW3wq_w?usp=sharing"}/>
-                    
-                
-                
+                    {portfolioItems.map((item) => (
+                        <CardPortfolio
+                            key={item.url ?? item.title}
+                            img={baseUrlImg + item.img}
+                            title={item.title}
+                            description={item.description}
+                            url={item.url}
+                            download={item.download}
+                        />
+                    ))}
                 </div>
             </div>
         </section>

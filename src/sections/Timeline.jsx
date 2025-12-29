@@ -1,15 +1,18 @@
 import styles from "./Timeline.module.css";
-import {data} from "../data";
+import ptData from "../data/pt.json";
+import enData from "../data/en.json";
 import SectionHeader from "../components/Sections_Header/index.jsx";
+import {useTranslation} from "react-i18next";
 
 function Timeline() {
+    const { t, i18n } = useTranslation();
 
-
-    const timelineData = data.timeline
+    const currentLanguage = i18n.language.startsWith('en') ? 'en' : 'pt';
+    const timelineData = currentLanguage === 'en' ? enData.timeline : ptData.timeline;
 
 
     const startYear = 2016;
-    const endYear = new Date().getFullYear() +1 ;
+    const endYear = new Date().getFullYear() + 1 ;
     const years = [];
     for (let year = startYear; year <= endYear; year += 2) {
         years.push(year);
@@ -79,27 +82,27 @@ function Timeline() {
     return (
         <section className={styles.timeline} id="timeline">
             <div className={styles.timelineContainer}>
-                <SectionHeader title={"Minha "} span={"Jornada!"}/>
-                <p className={styles.timelineSubtitle}>Cursos, trabalhos e formação acadêmica</p>
-                <p className={styles.timelineSubtitle}>Veja mais em meu Linkedin: <a href="https://www.linkedin.com/in/higor-milani/" target="_blank" rel="noreferrer">Higor Milani</a></p>
+                <SectionHeader title={t('timeline.title') + " "} span={t('timeline.span')}/>
+                <p className={styles.timelineSubtitle}>{t('timeline.subtitle')}</p>
+                <p className={styles.timelineSubtitle}>{t('timeline.linkedin_text')} <a href="https://www.linkedin.com/in/higor-milani/" target="_blank" rel="noreferrer">Higor Milani</a></p>
                 {/* Legenda */}
                 <div className={styles.legend}>
 
                     <div className={styles.legendItem}>
                         <span className={`${styles.legendColor} ${typeLegendClasses.academic}`}></span>
-                        <span>Educação</span>
+                        <span>{t('timeline.legend.education')}</span>
                     </div>
                     <div className={styles.legendItem}>
                         <span className={`${styles.legendColor} ${typeLegendClasses.work}`}></span>
-                        <span>Trabalho</span>
+                        <span>{t('timeline.legend.work')}</span>
                     </div>
                     <div className={styles.legendItem}>
                         <span className={`${styles.legendColor} ${typeLegendClasses.course}`}></span>
-                        <span>Cursos</span>
+                        <span>{t('timeline.legend.course')}</span>
                     </div>
                     <div className={styles.legendItem}>
                         <span className={`${styles.legendColor} ${typeLegendClasses.certification}`}></span>
-                        <span>Certificados e reconhecimentos</span>
+                        <span>{t('timeline.legend.certification')}</span>
                     </div>
                 </div>
 
@@ -144,9 +147,9 @@ function Timeline() {
                                             <h4 className={typeInstitutionClasses[item.type]}>{item.institution}</h4>
                                             <p>{item.description}</p>
                                             {item.validation && (
-                                                <p className={styles.validationText}>Código de validação: {item.validation}</p>)}
+                                                <p className={styles.validationText}>{t('timeline.tooltip.validation_code')} {item.validation}</p>)}
                                             {item.url && (
-                                            <p><a className={styles.linkOut} href={item.url} target='_blank' rel="noreferrer">  Certificado <i className='bx bx-link-external'></i></a></p>)}
+                                            <p><a className={styles.linkOut} href={item.url} target='_blank' rel="noreferrer">  {t('timeline.tooltip.certificate')} <i className='bx bx-link-external'></i></a></p>)}
                                         </div>
                                     </div>
                                 ))}
