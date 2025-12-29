@@ -65,6 +65,49 @@
       "certificate": "Certificate"
     }
   },
+  "portfolio": {
+    "title": "My",
+    "span": "Projects",
+    "items": [
+      {
+        "img": "design.jpg",
+        "title": "Design",
+        "description": "Design examples made by me.",
+        "url": "/img/Meus_Designs.pdf",
+        "download": "Meus Designs"
+      },
+      {
+        "img": "progamacao.jpg",
+        "title": "Programming",
+        "description": "My Github profile with projects.",
+        "url": "https://github.com/Higor-H"
+      },
+      {
+        "img": "projetos.jpg",
+        "title": "Project Development",
+        "description": "Some projects in various areas.",
+        "url": "https://drive.google.com/drive/folders/1sGX-tHFoBiXg-cmX9VYfRX8Fc42pSY9A?usp=sharing"
+      },
+      {
+        "img": "artigos.jpg",
+        "title": "Articles",
+        "description": "Some articles and writings on various subjects.",
+        "url": "https://drive.google.com/drive/folders/1eXaUf3gizhU_h3i712MHS4PV0vgZss87?usp=sharing"
+      },
+      {
+        "img": "testes.jpg",
+        "title": "Testing, Automation and QA",
+        "description": "My journey at Compass UOL.",
+        "url": "https://gitlab.com/higor_sprints"
+      },
+      {
+        "img": "hardware.jpg",
+        "title": "Arduino and hardware",
+        "description": "My projects with Arduino and C language.",
+        "url": "https://drive.google.com/drive/folders/1gkrOFtNQmk66OhA0RmXxzrv7UQW3wq_w?usp=sharing"
+      }
+    ]
+  },
   "services":  {
     "frontend": {
       "title": "Front-end Development",
