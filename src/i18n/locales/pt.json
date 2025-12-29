@@ -118,6 +118,10 @@
     "linkedin_btn": "Linkedin",
     "email_btn": "Email"
   },
+  "footer": {
+    "copyright": "Copyright © 2026. Todos direitos reservados!",
+    "back_to_top": "Voltar para a Home"
+  },
   "services": {
     "frontend": {
       "title": "Front-end Development",
