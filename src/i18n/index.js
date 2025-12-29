@@ -8,7 +8,7 @@ import en from './locales/en.json';
 
 const getInitialLanguage = () => {
     // 1. Verifica se a URL tem um idioma específico (ex: /en, /pt)
-    const pathLang = window.location.pathname.split('/')[1];
+    const pathLang = location.pathname.split('/')[1];
     if (['pt', 'en'].includes(pathLang)) {
         localStorage.setItem('userLanguage', pathLang);
         return pathLang;
@@ -29,7 +29,7 @@ const getInitialLanguage = () => {
     return detectedLang;
 };
 
-i18n
+void i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
