@@ -111,6 +111,13 @@
   "highlights": {
     "span": "Highlights"
   },
+  "contact": {
+    "title": "Contact",
+    "span": "Me!",
+    "description": "I would be happy to hear from you and discuss collaboration opportunities. Please use the buttons below to contact me via email or access my LinkedIn profile.",
+    "linkedin_btn": "Linkedin",
+    "email_btn": "Email"
+  },
   "services":  {
     "frontend": {
       "title": "Front-end Development",

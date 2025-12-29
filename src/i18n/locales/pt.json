@@ -111,6 +111,13 @@
   "highlights": {
     "span": "Destaques"
   },
+  "contact": {
+    "title": "Contate",
+    "span": "Me!",
+    "description": "Ficarei feliz em ouvir de você e discutir sobre oportunidades de colaboração. Por favor, utilize os botões abaixo para me contatar por e-mail ou acessar meu perfil no LinkedIn.",
+    "linkedin_btn": "Linkedin",
+    "email_btn": "Email"
+  },
   "services": {
     "frontend": {
       "title": "Front-end Development",
