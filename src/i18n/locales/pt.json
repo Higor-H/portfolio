@@ -1,0 +1,42 @@
+{
+  "seo": {
+    "description": "Sou Higor Milani, sou estudante da ATITUS, Automatizador de Testes e QA, além disso sou programador Fullstack, entusiasta de Cibersegurança, ML/IA e Big Data."
+  },
+  "home": {
+    "greeting": "Olá, meu nome é",
+    "role_intro": "E atuo como",
+    "description": "Estudante de Ciências da Computação na ATITUS, apaixonado por tecnologia e desenvolvimento de software. Atuo com QA, automação de testes e desenvolvimento Full Stack, além de explorar áreas como Big Data, cibersegurança e inteligência artificial, sempre integrando diferentes conhecimentos em meus projetos.",
+    "download_cv": "Download CV",
+    "curriculum_file" : "Currículo-Higor_Milani.pdf",
+    "curriculum_name" : "Currículo - Higor Milani",
+    "roles": [
+      "Full Stack Developer",
+      "QA Engineer",
+      "Test Automation Engineer",
+      "Big Data Professional",
+      "Cybersecurity Enthusiast",
+      "AI and Machine Learning Practitioner"
+    ],
+    "links": {
+      "github": "Link para o GitHub de Higor Milani",
+      "linktree": "Link para o Linktree de Higor Milani",
+      "instagram": "Link para o Instagram de Higor Milani",
+      "linkedin": "Link para o GitHub de Higor Milani"
+    }
+
+  },
+  "header": {
+    "home": "Home",
+    "about": "Sobre",
+    "timeline": "Linha do Tempo",
+    "portfolio": "Portfolio",
+    "highlights": "Destaques",
+    "contact": "Contato"
+  },
+  "services": {
+    "frontend": {
+      "title": "Front-end Development",
+      "description": "Eu trabalho com HTML, CSS, JavaScript..."
+    }
+  }
+}
